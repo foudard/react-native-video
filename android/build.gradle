@@ -41,7 +41,7 @@ def ExoplayerDependenciesList = [
     "useExoplayerSmoothStreaming",
     "useExoplayerDash",
     "useExoplayerHls",
-    "useExoplayerRtsp",
+    "useExoplayerRtsp"
 ]
 
 def ExoplayerDependencies = ExoplayerDependenciesList.collectEntries { property ->
@@ -233,4 +233,7 @@ dependencies {
     implementation "androidx.media3:media3-common:$media3_version"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Add this to decode ffmpeg all video/audio formats
+    implementation files('libs/lib-decoder-ffmpeg-release.aar')
 }
