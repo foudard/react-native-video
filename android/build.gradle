@@ -235,5 +235,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     // Add this to decode ffmpeg all video/audio formats
-    implementation files('libs/lib-decoder-ffmpeg-release.aar')
+    compileOnly files('libs/lib-decoder-ffmpeg-release.aar')
 }
