@@ -215,7 +215,7 @@ public class ReactExoplayerView extends FrameLayout implements
     private ReadableArray textTracks;
     private boolean disableFocus;
     private boolean focusable = true;
-    private boolean disableBuffering = true;
+    private boolean disableBuffering;
     private long contentStartTime = -1L;
     private boolean disableDisconnectError;
     private boolean preventsDisplaySleepDuringVideoPlayback = true;
