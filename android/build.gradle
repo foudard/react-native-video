@@ -223,6 +223,8 @@ dependencies {
 
     // For building media playback UIs
     implementation "androidx.media3:media3-ui:$media3_version"
+    // For building media playback UIs for Android TV
+    implementation "androidx.media3:media3-ui-leanback:$media3_version"
 
     // For exposing and controlling media sessions
     implementation "androidx.media3:media3-session:$media3_version"

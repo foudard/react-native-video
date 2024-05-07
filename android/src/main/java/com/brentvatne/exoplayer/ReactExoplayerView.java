@@ -215,7 +215,7 @@ public class ReactExoplayerView extends FrameLayout implements
     private ReadableArray textTracks;
     private boolean disableFocus;
     private boolean focusable = true;
-    private boolean disableBuffering;
+    private boolean disableBuffering = true;
     private long contentStartTime = -1L;
     private boolean disableDisconnectError;
     private boolean preventsDisplaySleepDuringVideoPlayback = true;
@@ -1203,7 +1203,8 @@ public class ReactExoplayerView extends FrameLayout implements
             }
 
             ArrayList<VideoTrack> videoTracks = getVideoTrackInfo();
-
+            // Add this to avoid freeze
+            player.setPlayWhenReady(true);
             eventEmitter.load(duration, currentPosition, width, height,
                     audioTracks, textTracks, videoTracks, trackId);
         }
